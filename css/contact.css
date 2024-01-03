@@ -1,0 +1,142 @@
+
+.body {
+  background-color: #2a78cb;
+}
+
+/* Card Styles */
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px; /* Provides a 3D-space for the card */
+  width: 300px !important; /* Adjust as needed */
+  height: 300px !important; /* Adjust as needed */
+  float: left;
+  padding: 8px;
+  margin-bottom: 55px;
+}
+
+.flip-card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  height: 100%; 
+  text-align: center;
+  transition: transform 0.6s; /* Enables a smooth flip animation */
+  transform-style: preserve-3d; /* Specifies that children elements will be positioned in 3D-space */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  background-color: rgba(255,255,255,0.1) !important;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); /* Rotate the card by 180 degrees when hovered */
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden; /* Ensures that the back of the card isn't visible during the flip */
+  transform: rotateX(0deg); /*this fixes a specific bug with flip cards in firefox showing the back of the card*/
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.flip-p{
+  color: black !important;
+}
+
+.card-image {
+  max-height: 150px;
+}
+
+
+.flip-card-back {
+  transform: rotateY(180deg); /* Positions the back of the card */
+}
+
+/* Make sure the images and text are centered on the card */
+.flip-card img, .flip-card p {
+  margin: auto;
+}
+
+
+.card-holder{
+  background-color: #2a78cb;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  display: flex;
+  overflow: hidden;
+  padding: 0px;
+}
+
+#cards {
+  flex-wrap: wrap;
+  gap: 8px;
+  display: flex;
+  max-width: 916px;
+  width: 100%;
+  justify-content: center;
+}
+
+@media only screen and (orientation: portrait) {
+  /* Insert your CSS styles for mobile devices in portrait mode here */
+
+  .flip-card {
+    background-color: transparent;
+    perspective: 1000px; /* Provides a 3D-space for the card */
+    width: 500px !important; /* Adjust as needed */
+    height: 500px !important; /* Adjust as needed */
+    float: left;
+    padding: 8px;
+  }
+
+  #cards {
+    flex-wrap: wrap;
+    gap: 8px;
+    display: flex;
+    max-width: 599px !important;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .card-image {
+    max-height: 225px;
+  }
+
+}
+
+
+  .alert {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 0;
+    border-radius: 0 !important;
+    position: relative;
+    width: 100%;
+}
+  
+  /* Sections */
+  .top-section {
+    background-color: #2a78cb;
+  }
+  
+
+  
+  /* Title Section */
+  
+  #title {
+    color: #fff;
+    text-align: center;
+  }
+  
+  #title .container-fluid {
+    padding: 3% 15%;
+  }
+
+  
