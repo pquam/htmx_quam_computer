@@ -143,24 +143,6 @@
       </div>
   </section>
 
-  <script>
-    document.body.addEventListener('htmx:load', function() {
-    console.log('HTMX has been initialized.');
-});
-
-document.body.addEventListener('htmx:beforeRequest', function(event) {
-    console.log('HTMX is about to send a request.', event.detail);
-});
-
-document.body.addEventListener('htmx:afterRequest', function(event) {
-    if (event.detail.success) {
-        console.log('HTMX request successful.', event.detail);
-    } else {
-        console.log('HTMX request failed.', event.detail);
-    }
-});
-
-  </script>
 </body>
 
 </html>
