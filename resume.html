@@ -120,8 +120,8 @@
 
         <h4>2022 - PRESENT</h4>
         <ul>
-          <li>Utilized Visual Studio Code and VIM to develop my personal website with HTML, CSS (Bootstrap), and JavaScript. Managed production and beta versions of
-            the website using git and GitHub.</li>
+          <li>Utilized Visual Studio Code and VIM to develop my personal website with HTML, CSS (Bootstrap), JavaScript, and HTMX. Managed production and beta versions of
+            the website using git and GitHub. Deployed website using Azure Static Webpages, with CI/CD via GitHub Actions.</li>
           <li>Personally deployed, configured, maintained, and secured a virtual private server (Debian) to host my website. Configured NGINX to serve HTML,
               CSS, and JavaScript files via HTTPS and redirect HTTP traffic to HTTPS. Configured Certbot to generate SSL certificates to enable HTTPS. Configured
               fail2ban, UFW, and Wazuh to detect, block and report malicious traffic. Updated default file permissions and configuration files to prevent common attacks.</li>
@@ -169,11 +169,10 @@
   </section>
 
   <section class="card-holder">
+    <ul class="spaced-list"></ul>
     <div hx-get="/templates/cards.html" hx-trigger="load"></div>
   </section>
-  
 
-    <script src="javascript/navbar.js"></script>
 </body>
 
 </html>
