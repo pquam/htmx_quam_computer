@@ -123,19 +123,17 @@
 
   <!-- top section -->
   <section class="top-section" id="title">
-   <div class="alert alert-primary" role="alert">
-    Donate to
-    <a class="alert-link" href="https://kramden.org/donate/" id="top">
-     The Kramden Institute
-    </a>
-   </div>
-   <!-- Nav bar -->
-   <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-    <div class="container-fluid">
-     <div id="navbar-placeholder">
-     </div>
-    </div>
-   </nav>
+   <div hx-get="/templates/donate.html" hx-swap="outerHTML" hx-trigger="load"></div>
+
+          
+
+            <!-- Nav bar -->
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+              <div class="container-fluid">
+                <div hx-get="/templates/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
+              </div>
+            </nav>
    <div class="container-fluid">
     <div class="row">
      <div class="col-lg-6">
@@ -2009,11 +2007,6 @@
    </div>
   </section>
   -->
-
-  <script src="../javascript/navbar.js">
-  </script>
-  <script src="../javascript/sidebar.js">
-  </script>
 
  </body>
 </html>

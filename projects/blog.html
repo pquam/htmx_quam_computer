@@ -27,16 +27,15 @@
   
     <!-- top section -->
     <section class="top-section" id="title">
-      <div class="alert alert-primary" role="alert">
-        Donate to 
-        <a href="https://kramden.org/donate/" class="alert-link">The Kramden Institute</a>
-      </div>          
+      <div hx-get="/templates/donate.html" hx-swap="outerHTML" hx-trigger="load"></div>
+
+          
 
             <!-- Nav bar -->
 
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
               <div class="container-fluid">
-                <div id="navbar-placeholder"></div>
+                <div hx-get="/templates/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
               </div>
             </nav>
 
@@ -67,58 +66,12 @@ It became enough of a problem I decided to start a blog.</h2>
 
     </section>
 
-    <section class="card-holder">
-      <div id="cards">
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <a href="https://www.linkedin.com/in/patrick-quam/" target="_blank" style="text-decoration: none;">
-                <img class="card-image" src="/images/linkedinlogo.png" alt="LinkedIn Icon">
-              </a>
-            </div>
-            <div class="flip-card-back">
-              <a href="https://www.linkedin.com/in/patrick-quam/" target="_blank" style="text-decoration: none;">
-                <img class="card-image" src="/images/linkedinlogo.png" alt="LinkedIn Icon">
-              </a>
-              <p class="flip-p">linkedin.com/in/patrick-quam</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <a href="https://github.com/pquam" target="_blank" style="text-decoration: none;">
-                <img class="card-image" src="/images/githublogo.png" alt="LinkedIn Icon">
-              </a>
-            </div>
-            <div class="flip-card-back">
-              <a href="https://github.com/pquam" target="_blank" style="text-decoration: none;">
-                <img class="card-image" src="/images/githublogo.png" alt="LinkedIn Icon">
-              </a>
-              <p class="flip-p">github.com/pquam</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <a href="mailto:patrick@quam.computer" style="text-decoration: none;">
-                <img class="card-image" src="/images/email.png" alt="LinkedIn Icon">
-              </a>
-            </div>
-            <div class="flip-card-back">
-              <a href="mailto:patrick@quam.computer" style="text-decoration: none;">
-                <img class="card-image" src="/images/email.png" alt="LinkedIn Icon">
-              </a>
-              <p class="flip-p">patrick@quam.computer</p>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </section>
+  </section>
+
+  <section class="card-holder">
+
+    <div hx-get="/templates/cards.html" hx-trigger="load"></div>
+  </section>
 
     <section class="grey-section">
   
@@ -217,8 +170,6 @@ While it is likely that OpenAI or Google would implement these features into the
         </div>
 
     </section>
-
-    <script src="/javascript/navbar.js"></script>
 </body>
 
 </html>

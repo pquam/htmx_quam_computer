@@ -25,16 +25,15 @@
   
     <!-- top section -->
     <section class="top-section" id="title">
-      <div class="alert alert-primary" role="alert">
-        Donate to 
-        <a href="https://kramden.org/donate/" class="alert-link">The Kramden Institute</a>
-      </div>          
+      <div hx-get="/templates/donate.html" hx-swap="outerHTML" hx-trigger="load"></div>
+
+          
 
             <!-- Nav bar -->
 
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
               <div class="container-fluid">
-                <div id="navbar-placeholder"></div>
+                <div hx-get="/templates/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
               </div>
             </nav>
 
@@ -69,7 +68,6 @@
            </h1>
         </div>
     </section>
-    <script src="../javascript/navbar.js"></script>
 </body>
 
 </html>
