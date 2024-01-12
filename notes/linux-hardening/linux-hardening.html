@@ -22,62 +22,13 @@
   <script src="/javascript/htmx.min.js"></script>
  </head>
  <body>
-      <button class="nav-toggle-btn" onclick="toggleNav()">
-            ☰  N a v i g a t i o n
-           </button>
-  <nav class="side-navigation">
-   <ul>
-    <li>
-      <a href="#top">
-       Back to Top
-      </a>
-     </li>
-    <li>
-     <a href="#-general-security-considerations-">
-      General Security Considerations
-     </a>
-    </li>
-    <li>
-     <a href="#-physical-security-">
-      Physical Security
-     </a>
-    </li>
-    <li>
-     <a href="#-account-security-">
-      Account Security
-     </a>
-    </li>
-    <li>
-     <a href="#-network-security-">
-      Network Security
-     </a>
-    </li>
-    <li>
-     <a href="#-securing-ssh-">
-      Securing SSH
-     </a>
-    </li>
-    <!--
-    <li>
-     <a href="#-filesystem-security-">
-      Filesystem Security
-     </a>
-    </li>
-    -->
-    <li>
-     <a href="#-other-security-resources-">
-      Other Security Resources
-     </a>
-    </li>
-   </ul>
-  </nav>
+  <button class="nav-toggle-btn" hx-get="side-nav.html" hx-swap="outerHTML" hx-trigger="load">☰  N a v i g a t i o n</button>
+
   <section class="top-section" id="title">
+
     <div hx-get="/templates/donate.html" hx-swap="outerHTML" hx-trigger="load"></div>
 
-          
-
     <!-- Nav bar -->
-
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
       <div class="container-fluid">
         <div hx-get="/templates/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
@@ -122,6 +73,7 @@
    <div class="col-lg-1">
    </div>
   </section>
+
   <!-- sub-section1, general security -->
   <section class="grey-section" >
    <div class="col-lg-12">
