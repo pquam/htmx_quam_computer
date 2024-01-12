@@ -205,7 +205,7 @@ mark {
   font-size: 17px;
 }
 
-.side-navigation button {
+.side-navigation a {
     color: #fff;
     text-decoration: none;
     text-shadow: 3px 3px 7px #000000;
@@ -216,7 +216,7 @@ mark {
     transition: background-color 0.3s ease;
 }
 
-.side-navigation button:hover {
+.side-navigation a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     text-decoration: none;
     color: #FFF;
