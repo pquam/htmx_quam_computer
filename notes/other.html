@@ -193,7 +193,7 @@
       </mark>
       Most modern transceivers will use LC connectors because they are smaller size. When choosing a transceiver there are 4 main things to consider:
      </li>
-     <ol class="hidden">
+     <ol >
       <li>
        The type of fiber optic cable (single-mode or multi-mode) you're using.
       </li>
@@ -210,7 +210,7 @@
      <li id="transceiver-info">
       Other technical considerations when choosing cabling and transceivers:
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        Different transceivers operate at different wavelengths, typically 850nm for multi-mode fibers and 1310nm or 1550nm for single-mode fibers. The wavelength is important because it determines the type of light source (LED or laser) and the type of photodetector used in the transceiver.
       </li>
@@ -290,7 +290,7 @@
      <li>
       Subnets:
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        Operate at Layer 3 (Network Layer) of the OSI model.
       </li>
@@ -316,7 +316,7 @@
      <li>
       VLANs:
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        Operate at Layer 2 (Data Link Layer) of the OSI model.
       </li>
@@ -356,14 +356,14 @@
      <li>
       TCP Connection Establishment (Three-Way Handshake):
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        The client initiates a connection to the server using the Transmission Control Protocol (TCP), the primary transport protocol of the internet.
       </li>
       <li>
        A three-way handshake occurs to establish this connection:
       </li>
-      <ol class="hidden">
+      <ol >
        <li>
         SYN: The client sends a SYN (synchronize) packet to the server at the obtained IP address, indicating it wants to establish a connection.
        </li>
@@ -378,7 +378,7 @@
      <li>
       HTTP/HTTPS Request:
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        Once the TCP connection is established, the client sends an HTTP (Hypertext Transfer Protocol) or HTTPS (HTTP Secure) request to the server. This request includes details like the desired webpage, the browser being used, supported data formats, and more.
       </li>
@@ -389,7 +389,7 @@
      <li>
       Server Processing:
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        The server processes the client's request. For static websites, this might simply involve fetching the requested webpage. For dynamic websites, the server might need to run scripts, query databases, or perform other operations to generate the requested content.
       </li>
@@ -397,7 +397,7 @@
      <li>
       HTTP/HTTPS Response:
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        The server sends an HTTP/HTTPS response back to the client. This response includes the requested content (like HTML, CSS, JavaScript, images) and status codes indicating the result of the request (e.g., 200 for "OK", 404 for "Not Found").
       </li>
@@ -405,11 +405,11 @@
      <li>
       Rendering the Webpage:
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        The client's browser processes the received data, rendering the webpage for the user to view. This involves:
       </li>
-      <ul class="hidden">
+      <ul >
        <li>
         Parsing the HTML, CSS, and JavaScript.
        </li>
@@ -424,11 +424,11 @@
      <li>
       TCP Connection Termination:
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        After the data exchange is complete, the TCP connection is terminated to free up resources. This involves a four-step process:
       </li>
-      <ol class="hidden">
+      <ol >
        <li>
         FIN: One side (usually the client) sends a FIN (finish) packet, indicating it's done sending data.
        </li>
@@ -446,7 +446,7 @@
      <li>
       Persistent Connections:
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        Modern web protocols, like HTTP/2, support persistent connections. Instead of closing the connection after a single request-response cycle, the connection remains open for a set period, allowing multiple requests and responses without the overhead of establishing a new connection each time.
       </li>
@@ -479,7 +479,7 @@
        Common Uses:
       </mark>
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        Multicast and IGMP are often used in IPTV and other streaming media applications where the same content is delivered to multiple recipients.
       </li>
@@ -493,7 +493,7 @@
      <li>
       How does IGMP work?
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        Hosts send IGMP messages to their local multicast router, indicating their interest in joining a specific multicast group.
       </li>
@@ -516,7 +516,7 @@
       </mark>
       imagine a scenario in a corporate LAN where a video conference is being multicast to multiple participants.
      </li>
-     <ol class="hidden">
+     <ol >
       <li>
        The video conferencing server streams the video to a multicast IP address, say 239.1.2.3.
       </li>
@@ -544,7 +544,7 @@
      <li>
       Any device on the network can send a broadcast frame, depending on its needs:
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        A new device that just connected to the network might send a broadcast to discover services like DHCP.
       </li>
@@ -579,7 +579,7 @@
     </ul>
 
     <h3 id="proxy-vs-vpn">What is the difference between a proxy and a VPN?</h3>
-    <ul class="hidden">
+    <ul >
       <li>Both VPNs (Virtual Private Networks) and proxies are used to reroute internet traffic, masking the user's actual IP address.</li>
       <li>A VPN establishes a secure, encrypted connection between your device and a remote server, operated by the VPN service provider. All your internet traffic is routed through this connection. This encryption adds a layer of privacy and security, making it difficult for third parties to intercept or eavesdrop on your online activities. VPNs operate at the system level, redirecting all of the device's internet traffic, including every application that accesses the internet. Generally, a VPN might have a more significant impact on connection speed due to encryption and the distance to the VPN server.</li>
       <li>A proxy server acts as an intermediary between your device and the internet. It forwards requests and responses on your behalf, hiding your real IP address.  Unlike VPNs, proxies usually don't encrypt your data, meaning the information might be exposed to third parties.  Proxies often work at the application level, meaning they are configured per application (such as a web browser), not for the entire device.</li>

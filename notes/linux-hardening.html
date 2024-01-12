@@ -134,7 +134,7 @@
    <div class="col-lg-1">
    </div>
    <div class="sub-section-box col-lg-12">
-    <ul class="hidden">
+    <ul >
      <li>
       <mark>
        Root user is all powerful.
@@ -205,7 +205,7 @@
    <div class="col-lg-1">
    </div>
    <div class="sub-section-box col-lg-12">
-    <ul class="hidden">
+    <ul >
      <li>
       Ensure that single user mode is either disabled or password protected. Single user mode can be accessed by restarting the system, and provides root access to the system.
      </li>
@@ -275,7 +275,7 @@
      <li>
       Ensure device encryption is enabled. Requiring a boot password can be circumvented by an attack installing their own boot media and mounting the system. LUKS is a common encryption tool.
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        For example, if you are hosting a web server in a cloud instance, ensure the cloud instance is encrypted. additionally, you can run the server in a VM, and make sure the virtual drive for the VM is encrypted.
       </li>
@@ -289,7 +289,7 @@
      <li>
       Disable CTRL+ALT+DEL. CTRL+ALT+DEL initiates a system reboot. if an attacker is able to gain access to the system they may use the restart to gain access to the bootloader.
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        CTRL+ALT+DEL can be disabled by running
        <code>
@@ -315,7 +315,7 @@
       </h1>
      </div>
      <div class="sub-section-box col-lg-12">
-      <ul class="hidden">
+      <ul >
        <li>
         Root user always has a user ID of 0.
        </li>
@@ -348,7 +348,7 @@
         </code>
         will show failed login attempts.
        </li>
-       <ul class="hidden">
+       <ul >
         <li>
          The
          <code>
@@ -380,7 +380,7 @@
        <li class="sub-list-padding">
         Sometimes you may want to lock a user account. Maybe the account is compromised, a user no longer needs access, or it is a dedicated account for a service or application. Here are a few ways you can disable logins:
        </li>
-       <ul class="hidden">
+       <ul >
         <li>
          Changing the final entry in a users line of the
          <code>
@@ -388,7 +388,7 @@
          </code>
          file to nologin (default is /bin/bash)
         </li>
-        <ul class="hidden">
+        <ul >
          <li>
           This can also be done by using the change shell command like this:
           <code>
@@ -412,7 +412,7 @@
         <li>
          Another way to lock an account is with the passwd command, although this only prevents the user from logging in using a password. For example, a user would still be able to log in using an SSH key.
         </li>
-        <ul class="hidden">
+        <ul >
          <li>
           To lock an account:
           <code>
@@ -430,7 +430,7 @@
        <li class="sub-list-padding">
         PAM, or pluggable Authentication Module
        </li>
-       <ul class="hidden">
+       <ul >
         <li>
          PAM allows applications to use any authentication method (ie, fingerprint, yubikey, etc).
         </li>
@@ -461,7 +461,7 @@
         <li>
          PAM can also be used to prevent non-root users from logging in.
         </li>
-        <ul class="hidden">
+        <ul >
          <li>
           By adding
           <code>
@@ -514,7 +514,7 @@
          /etc/login.defs
         </code>
        </li>
-       <ul class="hidden">
+       <ul >
         <li>
          <code>
           pass_MIN_LEN
@@ -531,7 +531,7 @@
        <li class="sub-list-padding">
         Use Shadow passwords.
        </li>
-       <ul class="hidden">
+       <ul >
         <li>
          Encrypted Passwords are typically stored in
          <code>
@@ -560,7 +560,7 @@
         <li>
          Shadow password format:
         </li>
-        <ul class="hidden">
+        <ul >
          <li>
           <code>
            username:hashed password: days since epoch of last password change: days until user is allowed to change password: days before a password change is required: days warning before password expiry: days before account becomes inactive: days since epoch when account expires: reserved
@@ -579,7 +579,7 @@
         </code>
         : change user password expiry information.
        </li>
-       <ul class="hidden">
+       <ul >
         <li>
          <code>
           chage -l account
@@ -608,7 +608,7 @@
        <li class="sub-list-padding">
         Centralized Authentication
        </li>
-       <ul class="hidden">
+       <ul >
         <li>
          Centralized authentication systems allow administrators to prevent accounts from performing any actions, including logging in if they become compromised.
         </li>
@@ -622,7 +622,7 @@
        <li class="sub-list-padding">
         Intrusion prevention
        </li>
-       <ul class="hidden">
+       <ul >
         <li>
          Intrusion prevention systems, such as
          <a class="link" href="https://www.fail2ban.org/wiki/index.php/Main_Page" target="_blank">
@@ -640,14 +640,14 @@
        <li class="sub-list-padding">
         Disabling root logins
        </li>
-       <ul class="hidden">
+       <ul >
         <li>
          To display all accounts with UID of 0 (root access), run
          <code>
           awk -F: '$3 == 0 {print $1}' /etc/passwd
          </code>
         </li>
-        <ul class="hidden">
+        <ul >
          <li>
           This command works by using awk, which is a text processing command. The -F: option tells awk to use a colon as the field separator, as fields in the /etc/passwd file are separated by colons. The $3 == 0 part is a condition that checks if the third field (which is the UID) is 0. If this condition is true, awk executes the action in the curly braces, which is to print the first field (the username).
          </li>
@@ -660,7 +660,7 @@
           /etc/securetty
          </code>
         </li>
-        <ul class="hidden">
+        <ul >
          <li>
           This is a config file that contains a list of TTY devices where root is allowed to login. Leaving it blank will prevent root logins.
          </li>
@@ -689,7 +689,7 @@
          </code>
          file.
         </li>
-        <ul class="hidden">
+        <ul >
          <li>
           you can prevent other users from accessing the system via SSH by adding
           <code>
@@ -707,7 +707,7 @@
         <li class="sub-list-padding">
          Securing System / Application Accounts
         </li>
-        <ul class="hidden">
+        <ul >
          <li>
           Use 1 account per service. For example, if you are running an nginx web server, run that server as its own nginx user.
          </li>
@@ -725,7 +725,7 @@
         <li class="sub-list-padding">
          Deleting Accounts
         </li>
-        <ul class="hidden">
+        <ul >
          <li>
           When an account is no longer needed, use
           <code>
@@ -771,11 +771,11 @@
    <div class="col-lg-1">
    </div>
    <div class="sub-section-box col-lg-12">
-    <ul class="hidden">
+    <ul >
      <li>
       Network Services (typically referred to as servers, or daemons)
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        Servers &amp; daemons constantly run and the background &amp; listen on network ports.
       </li>
@@ -789,7 +789,7 @@
      <li>
       Use a dedicated user for each application.
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        This way, if an attacker gains control over a system, they should not be able to access the rest of the system.
       </li>
@@ -809,7 +809,7 @@
      <li>
       Configure each service to only listen to required interfaces and addresses.
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        For example, configure SSH to only listen to private IP addresses on the local network so that SSH is not accessable via the internet.
       </li>
@@ -832,7 +832,7 @@
     </h1>
    </div>
    <div class="sub-section-box col-lg-12">
-    <ul class="hidden">
+    <ul >
      <li>
       Key based authentication is generally the safest way to use SSH
      </li>
@@ -853,7 +853,7 @@
        ssh-keygen
       </code>
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        When generating a key, it is common to use
        <code>
@@ -861,7 +861,7 @@
        </code>
        to specify what algorithm to use when generating the key.
       </li>
-      <ul class="hidden">
+      <ul >
        <li>
         Common algorithm options are rsa and ed25519
        </li>
@@ -873,7 +873,7 @@
        </code>
        which is used to specify the number of bits in the key.
       </li>
-      <ul class="hidden">
+      <ul >
        <li>
         A longer key means it is better protected against brute force attacks, but it also means it is more compute heavy to generate and validate.
        </li>
@@ -885,7 +885,7 @@
       <li>
        When you generate an ssh key, it will ask you to input a password that will be required when that key is used.
       </li>
-      <ul class="hidden">
+      <ul >
        <li>
         In some usecases, you may not want to have a password protected key. For example, if you need to automate an SSH connection, it may be unnecessarily complicated to automate password entry.
        </li>
@@ -893,7 +893,7 @@
       <li>
        When you run ssh-keygen, two files are created in that users  <code>~/.ssh/</code> directory. Those files are id_rsa &amp; id_rsa.pub
       </li>
-      <ul class="hidden">
+      <ul >
        <li>
         id_rsa is your <mark>private</mark> SSH key. Its permissions should be set so that only the user that generated it can access it.
        </li>
@@ -929,7 +929,7 @@
       </code>
       file.
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        Disabling password authentication to SSH is generally good practice as SSH keys are effectively impossible to brute force.
       </li>
@@ -939,7 +939,7 @@
        You should never log in directly to the root user.
       </mark>
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        When setting up a remote host initially it is OK to log in as the root user to get other accounts set up, but then SSH access should quickly be disabled.
       </li>
@@ -964,7 +964,7 @@
      <li>
       sshd_config
      </li>
-     <ul class="hidden">
+     <ul >
       <li>
        Specific users can be granted SSH access by adding
        <code>
@@ -1002,7 +1002,7 @@
         Changes to sshd_config will not apply until the application has been reloaded.
        </mark>
       </li>
-      <ul class="hidden">
+      <ul >
        <li>
         This can generally be done by running
         <code>
@@ -1011,7 +1011,7 @@
        </li>
       </ul>
      </ul>
-     <ul class="hidden">
+     <ul >
      </ul>
     </ul>
    </div>
@@ -1033,7 +1033,7 @@
     </h1>
    </div>
    <div class="sub-section-box col-lg-12">
-    <ul class="hidden">
+    <ul >
       <li>In production environments, you may want to consider having 2 user accounts, one that is read only, and another that has access to edit or delete files. This way, you are less likely to accidentally delete something important.</li>
     </ul>
    </div>
@@ -1051,7 +1051,7 @@
    <div class="col-lg-1">
    </div>
    <div class="sub-section-box col-lg-12">
-    <ul class="hidden">
+    <ul >
      <li>
       <a class="link" href="https://www.linode.com/docs/guides/security/basics/" target="_blank">
        Linode Security Basics
