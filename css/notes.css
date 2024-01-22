@@ -263,6 +263,11 @@ mark {
     font-size: 1.5em;
   }
 
+  .bottom-nav {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   /*CSS changes for mobile devices*/
 
