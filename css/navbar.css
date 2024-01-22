@@ -58,10 +58,8 @@
   }
 
   @media only screen and (max-width: 1500px){
-      /*
-.navbar-toggler {
-  padding: 10%;
-  display: inline-block;
-}
-*/
+    
+    .collapse {
+      justify-content: left;
+    }
   }
