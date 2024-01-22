@@ -22,9 +22,7 @@
   <script src="/javascript/htmx.min.js"></script>
  </head>
  <body>
-  <div>
-    <button class="nav-toggle-btn" hx-get="side-nav.html" hx-trigger="click" hx-swap="innerHTML" hx-target="#nav">☰  N a v i g a t i o n</button>
-  </div>
+  <div hx-get="side-nav.html" hx-trigger="load"></div>
 
   <section class="top-section" id="title">
 
@@ -33,7 +31,7 @@
     <!-- Nav bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
       <div class="container-fluid">
-        <div id="navbar" hx-get="/templates/navbar.html" hx-target="#navbar" hx-trigger="load"></div>
+        <div id="navbar" hx-get="/templates/navbar.html" hx-trigger="load"></div>
       </div>
     </nav>
    <div class="container-fluid">
@@ -110,6 +108,6 @@
   <div class="col-lg-1">
   </div>
  </section>
- <script src="../javascript/sidebar.js"></script>
+ <script src="/javascript/sidebar.js"></script>
  </body>
 </html>
