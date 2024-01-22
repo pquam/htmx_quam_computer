@@ -62,4 +62,8 @@
     .collapse {
       justify-content: left;
     }
+
+    #navbar-dropdown {
+      display: block !important;
+    }
   }
