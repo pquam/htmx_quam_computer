@@ -11,8 +11,6 @@ function toggleNav() {
 }
 
 function loadContentAndNavigate(target) {
-  // Assuming `toggleNav()` is your function to trigger HTMX content loading
-  toggleNav();
 
   // Listen for HTMX to complete the content load
   document.body.addEventListener('htmx:afterSwap', function() {
