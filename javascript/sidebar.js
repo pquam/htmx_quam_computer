@@ -10,6 +10,20 @@ function toggleNav() {
   
 }
 
+function loadContentAndNavigate(target) {
+  // Assuming `toggleNav()` is your function to trigger HTMX content loading
+  toggleNav();
+
+  // Listen for HTMX to complete the content load
+  document.body.addEventListener('htmx:afterSwap', function() {
+      // Navigate to the target section
+      const section = document.querySelector(target);
+      if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+      }
+  }, { once: true }); // The 'once' option auto-removes the listener after it runs
+}
+
 
 //if the window width is increased, return the sidebar to normal
 window.addEventListener('resize', function() {
