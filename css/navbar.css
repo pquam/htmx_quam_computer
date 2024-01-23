@@ -60,11 +60,7 @@
   @media only screen and (max-width: 1500px){
     
     .collapse {
-      display: block;
       justify-content: left;
     }
 
-    #navbarNavDropdown {
-      display: block;
-    }
   }
