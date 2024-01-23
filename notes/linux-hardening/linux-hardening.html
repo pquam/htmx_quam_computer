@@ -75,7 +75,12 @@
    </div>
   </section>
 
-<div id="content" hx-get="general-security.html" hx-trigger="load"></div>
+  <div id="content"></div>
+<div id="#general-security" hx-get="general-security.html" hx-trigger="reveal" hx-swap="innerHTML show:top" hx-target="#content"></div>
+<div id="#physical-security" hx-get="physical-security.html" hx-trigger="reveal" hx-swap="innerHTML show:top" hx-target="#content"></div>
+<div id="#account-security" hx-get="account-security.html" hx-trigger="reveal" hx-swap="innerHTML show:top" hx-target="#content"></div>
+<div id="#netowrk-security" hx-get="network-security.html" hx-trigger="reveal" hx-swap="innerHTML show:top" hx-target="#content"></div>
+<div id="#securing-ssh" hx-get="securing-ssh.html" hx-trigger="reveal" hx-swap="innerHTML show:top" hx-target="#content"></div>
 
 <section class="colored-section">
   <div class="col-lg-12">
