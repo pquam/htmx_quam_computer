@@ -286,6 +286,10 @@ mark {
     font-size: 36px;
   }
 
+  h3, h4 {
+    font-size: 42px;
+  }
+
   .side-navigation {
     display: none;
     top: 0;

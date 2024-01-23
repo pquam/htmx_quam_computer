@@ -169,6 +169,15 @@
   
   
   @media (max-width: 1110px) {
+
+    li, p {
+      color: #fff;
+      font-size: 36px;
+    }
+  
+    h3, h4 {
+      font-size: 42px;
+    }
   
     #title {
       text-align: center;
