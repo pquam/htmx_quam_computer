@@ -1,20 +1,29 @@
   
-  h1, h2, h3, h4, h5, h6 {
-    font-family:'Courier New', Courier, monospace;
-    color: #fff;
-  }
-
-  h4 {
-    padding: 15px;
-    border-radius: 10px;
-  }
+     li, p {
+      color: #fff;
+      font-size: 36px;
+    }
   
-  p {
-    color: #fff;
-    font-size: 26px;
-  }
-
-  li {
+    h1{
+      font-size: 54px;
+    }
+  
+    h2 {
+      font-size: 48px;
+    }
+  
+    h3 {
+      font-size: 44px;
+    }
+  
+    h4 {
+      font-size: 42px;
+      padding: 15px;
+      border-radius: 10px;
+    }
+ 
+ h1, h2, h3, h4, h5, h6 {
+    font-family:'Courier New', Courier, monospace;
     color: #fff;
   }
 
@@ -170,27 +179,6 @@
   
   
   @media (max-width: 1110px) {
-
-    li, p {
-      color: #fff;
-      font-size: 36px;
-    }
-  
-    h1{
-      font-size: 54px;
-    }
-  
-    h2 {
-      font-size: 48px;
-    }
-  
-    h3 {
-      font-size: 44px;
-    }
-  
-    h4 {
-      font-size: 42px;
-    }
   
     #title {
       text-align: center;
