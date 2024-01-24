@@ -11,7 +11,7 @@
         <li>The default configuration file is stored in <code>/etc/nginx/nginx.conf</code>. This file usually makes refrences to the <code>/etc/nginx/sites-available</code> directory to look for additional configuration files. These configuration files are the ones that will be more relevant to most users using nginx as a web server.</li>
         
         <li>I've additional comments (indicated with #/) to explain the contents, but this is what the file should look like after adding the nginx user:</li>
-<code><pre style="overflow-x: auto;">
+<code style="max-width: 100%;"><pre style="overflow-x: auto;">
 #/Specifies the user as nginx under which the Nginx worker processes run. This is for security, ensuring that Nginx doesn't run with root privileges.
 user nginx;
 #/Specifies the number of worker processes. auto means Nginx will try to detect the number of available CPU cores and use that number.
