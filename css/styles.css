@@ -1,7 +1,7 @@
   
      li, p {
       color: #fff;
-      font-size: 36px;
+      font-size: 34px;
     }
   
     h1{
@@ -17,7 +17,7 @@
     }
   
     h4 {
-      font-size: 42px;
+      font-size: 42px !important;
       padding: 15px;
       border-radius: 10px;
     }
